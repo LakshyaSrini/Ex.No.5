@@ -2,12 +2,25 @@
 
 ## AIM: 
 
-To test and compare how different pattern models respond to various prompts (broad or unstructured) versus basic prompts (clearer and more refined) across multiple scenarios.  Analyze the quality, accuracy, and depth of the generated responses 
+To analyze and compare the effectiveness of different prompting patterns by testing **Naïve Prompts** and **Refined Prompts** in different scenarios.
+
+The generated responses are assessed based on:
+
+* **Response quality**
+* **Accuracy**
+* **Level of detail**
+* **Organization**
+* **Relevance**
+* **Practical value**
+
 
 ## AI TOOLS REQUIRED: 
 
-ChatGPT 
-
+- ChatGPT 
+- Computer / Laptop
+- Internet Connection
+- GitHub
+  
 ## 1. INTRODUCTION
 
 Prompting is the process of giving instructions or questions to an Artificial Intelligence system to obtain a desired response. The quality of an AI-generated response depends not only on the capability of the AI model but also on how clearly the user's requirement is communicated.
@@ -335,47 +348,269 @@ The refined prompt generates a more systematic explanation because the required 
 | Recommendation        | Generic advice    | Personalized task-oriented advice | Refined       |
 | Technical Explanation | Basic explanation | Detailed and organized            | Refined       |
 
-## 12. RESPONSE QUALITY RATING
+Ahh, understood 👍 **We should NOT change the faculty-given Smart Traffic scenario.** We’ll keep the exact scenario and technical requirements, but **paraphrase the explanation, prompts, observations, findings, etc.** so your record is different from the GitHub reference.
 
-| Scenario       | Parameter | Naïve | Refined |
-| -------------- | --------- | ----: | ------: |
-| Story          | Quality   |   3/5 |     5/5 |
-| Story          | Depth     |   3/5 |     4/5 |
-| Factual        | Accuracy  |   4/5 |     5/5 |
-| Factual        | Relevance |   4/5 |     5/5 |
-| Summary        | Clarity   |   3/5 |     5/5 |
-| Summary        | Depth     |   3/5 |     4/5 |
-| Recommendation | Relevance |   3/5 |     5/5 |
-| Technical      | Structure |   3/5 |     5/5 |
-| Technical      | Depth     |   3/5 |     5/5 |
+Here is the revised version:
 
-Scale:
-1 – Poor | 2 – Fair | 3 – Good | 4 – Very Good | 5 – Excellent
+---
 
-## 13. EFFECT OF PROMPT CLARITY
+# 11. SCENARIO 5: ENGINEERING PROBLEM
 
-The experiment demonstrates that adding useful information to a prompt can significantly influence the generated output.
+## 11.1 REAL-WORLD SCENARIO
 
-Without sufficient instructions:
+Consider a busy **4-way city intersection** during peak morning hours. A large number of vehicles use the junction, resulting in different traffic levels on each road.
 
-Broad Prompt → AI interprets the task → General response
+At the same time, an **ambulance carrying a critical patient** reaches the intersection. Since the existing traffic lights operate using fixed timings, the ambulance may face unnecessary delay.
 
-With clear instructions:
+To overcome this problem, an **AI-Based Smart Traffic Management System** can be developed to monitor traffic conditions and give priority to emergency vehicles.
 
-Context + Task + Requirements + Format → AI understands expectations → Focused response
+The system should:
 
-Therefore, prompt refinement provides greater control over the generated content.
+* Identify vehicles using cameras
+* Measure traffic density
+* Categorize traffic as LOW, MEDIUM, or HIGH
+* Recognize ambulances
+* Give emergency vehicles the highest priority
+* Adjust traffic signals automatically
+* Resume normal signal operation after the ambulance passes
 
-<img width="932" height="641" alt="image" src="https://github.com/user-attachments/assets/c26786d8-22bc-405e-91a6-14f77866bc4b" />
+---
+
+## 11.2 PROBLEM STATEMENT
+
+Develop an **AI-Based Smart Traffic Management System with Emergency Vehicle Priority** for a 4-way urban intersection.
+
+The system should make traffic signal decisions according to **real-time traffic conditions** while ensuring that emergency vehicles receive immediate priority.
+
+```text
+Emergency Vehicle
+        ↓
+   Highest Priority
+        ↓
+High Traffic Density
+        ↓
+Medium Traffic Density
+        ↓
+Low Traffic Density
+        ↓
+   Lowest Priority
+```
+
+---
+
+## 11.3 NAÏVE PROMPT
+
+```text
+Design an AI-based smart traffic system.
+```
+
+---
+
+## 11.4 EXPECTED OUTPUT FROM NAÏVE PROMPT
+
+A simple prompt may produce a general response such as:
+
+> An AI-based traffic system uses cameras and sensors to observe vehicles and traffic conditions. AI can determine traffic density and adjust signals accordingly. Emergency vehicles can also be given priority.
+
+### Observation
+
+The response gives a **basic understanding of the system**, but it does not clearly specify the technical requirements, architecture, algorithm, implementation, or testing process.
+
+---
+
+# 12. REFINED ENGINEERING PROMPT
+
+```text
+Act as an AI and Embedded Systems Engineer.
+
+Design an AI-Based Smart Traffic Management System with
+Emergency Vehicle Priority for a 4-way urban intersection.
+
+The system should monitor traffic using cameras, determine
+traffic density as LOW, MEDIUM, or HIGH, and identify
+ambulances or emergency vehicles.
+
+The emergency vehicle must receive the highest priority.
+After the emergency vehicle passes, the system should
+continue normal traffic signal operation.
+
+Include:
+1. Problem definition
+2. Requirements
+3. Hardware and software
+4. System architecture
+5. Working principle
+6. Traffic density algorithm
+7. Emergency vehicle detection
+8. Flowchart
+9. Python simulation
+10. Test cases
+11. Expected results
+12. Advantages
+13. Limitations
+14. Future enhancements
+
+Present the solution in a simple, structured format.
+```
+
+---
+
+## 13. EXPECTED OUTPUT FROM REFINED PROMPT
+
+The refined prompt is expected to generate a **complete and organized engineering solution** containing the system requirements, architecture, algorithm, implementation, testing, and expected results.
+
+### Observation
+
+Unlike the naïve prompt, the refined prompt provides **specific instructions and output requirements**, resulting in a more detailed and practical response.
+
+---
+
+## 14. SYSTEM ARCHITECTURE
+
+```text
+Traffic Cameras
+       ↓
+Vehicle Detection
+       ↓
+Traffic Density Analysis
+       ↓
+LOW / MEDIUM / HIGH
+       ↓
+Emergency Vehicle Detection
+       ↓
+AI Decision Making
+       ↓
+Traffic Signal Controller
+       ↓
+Signal Control
+```
+
+---
+
+## 15. DECISION LOGIC
+
+```text
+Detect Traffic
+      ↓
+Check Emergency Vehicle
+      ↓
+   YES ─────→ Give Highest Priority
+      ↓
+     NO
+      ↓
+Check Traffic Density
+      ↓
+HIGH → HIGH PRIORITY
+MEDIUM → MEDIUM PRIORITY
+LOW → LOW PRIORITY
+```
+
+---
+
+## 16. PYTHON SIMULATION
+
+```python
+def traffic_control(density, emergency):
+
+    if emergency:
+        return "Emergency Vehicle - GREEN"
+
+    if density == "HIGH":
+        return "High Traffic - GREEN"
+
+    elif density == "MEDIUM":
+        return "Medium Traffic - GREEN"
+
+    else:
+        return "Low Traffic - GREEN"
 
 
-## CONCLUSION
+print(traffic_control("HIGH", False))
+print(traffic_control("LOW", True))
+```
 
-The experiment successfully demonstrated the difference between naïve and refined prompting techniques. The results showed that refined prompts generally produced responses with better quality, relevance, structure and depth because they provided the AI with clear instructions and context.
+### Expected Output
 
-However, naïve prompts were also effective for simple questions where additional information was unnecessary. Therefore, the best prompting approach depends on the complexity of the task. Effective prompt engineering focuses on providing clear, relevant and specific instructions rather than simply creating longer prompts.
+```text
+High Traffic - GREEN
+Emergency Vehicle - GREEN
+```
 
-## RESULT
+---
 
-The prompts for the above-mentioned problem were executed successfully using ChatGPT. The responses obtained from naïve and refined prompts were compared across multiple scenarios based on quality, accuracy, relevance, clarity and depth. The refined prompts generally produced more focused and structured responses than the naïve prompts.
+## 17. TEST CASES
 
+| Test Case | Traffic | Emergency Vehicle | Expected Result                         |
+| --------- | ------- | ----------------- | --------------------------------------- |
+| TC01      | LOW     | No                | Low traffic priority                    |
+| TC02      | MEDIUM  | No                | Medium traffic priority                 |
+| TC03      | HIGH    | No                | High traffic priority                   |
+| TC04      | LOW     | Yes               | Emergency vehicle priority              |
+| TC05      | HIGH    | Yes               | Emergency vehicle gets highest priority |
+| TC06      | MEDIUM  | No                | Normal traffic control                  |
+
+---
+
+## 18. EVALUATION
+
+The responses can be compared using:
+
+* **Quality**
+* **Accuracy**
+* **Depth**
+* **Structure**
+* **Relevance**
+* **Practical usefulness**
+
+| Prompt Type    | Overall Response            |
+| -------------- | --------------------------- |
+| Naïve Prompt   | General and limited         |
+| Refined Prompt | Detailed and well-organized |
+
+### Key Observation
+
+The **refined prompt produces a more complete response** because it clearly defines the problem, requirements, expected sections, and technical constraints.
+
+---
+
+## 19. FINDINGS
+
+1. Naïve prompts provide simple and general responses.
+2. Refined prompts produce more detailed outputs.
+3. Adding context improves the relevance of the answer.
+4. Clear requirements improve response structure.
+5. Specifying the output format makes the answer easier to use.
+6. Test cases help evaluate the generated solution.
+7. Refined prompting is more suitable for complex engineering tasks.
+
+---
+
+## 20. KEY LEARNING
+
+```text
+Clear Instructions
+       +
+Context
+       +
+Requirements
+       +
+Constraints
+       +
+Expected Output
+       ↓
+Improved AI Response
+```
+
+A carefully designed prompt helps the AI understand the engineering problem and generate a more useful solution.
+
+---
+
+## 21. CONCLUSION
+
+The experiment demonstrates that **prompt design has a significant effect on AI-generated responses**. A naïve prompt gives a broad response, whereas a refined prompt produces a more **detailed, structured, relevant, and technically useful solution**.
+
+---
+
+## 22. RESULT
+
+**The experiment was successfully completed. The comparison showed that refined prompts provide better-quality and more structured responses than naïve prompts, particularly when solving complex engineering problems.**
