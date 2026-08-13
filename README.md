@@ -185,9 +185,9 @@ How it works: AI systems learn patterns from data using algorithms and models. B
 
 Applications:
 
-Healthcare: Helps detect diseases from medical images.
-Transportation: Supports navigation and driver-assistance systems.
-Education: Provides personalized learning and automated assistance.
+- Healthcare: Helps detect diseases from medical images.
+- Transportation: Supports navigation and driver-assistance systems.
+- Education: Provides personalized learning and automated assistance.
 
 Real-world example: ChatGPT is an AI system that can understand natural-language questions and generate human-like responses.
 
@@ -354,9 +354,9 @@ Here is the revised version:
 
 ---
 
-# 11. SCENARIO 5: ENGINEERING PROBLEM
+# 12. SCENARIO 6: ENGINEERING PROBLEM
 
-## 11.1 REAL-WORLD SCENARIO
+## 12.1 REAL-WORLD SCENARIO
 
 Consider a busy **4-way city intersection** during peak morning hours. A large number of vehicles use the junction, resulting in different traffic levels on each road.
 
@@ -376,7 +376,7 @@ The system should:
 
 ---
 
-## 11.2 PROBLEM STATEMENT
+## 12.2 PROBLEM STATEMENT
 
 Develop an **AI-Based Smart Traffic Management System with Emergency Vehicle Priority** for a 4-way urban intersection.
 
@@ -398,7 +398,7 @@ Low Traffic Density
 
 ---
 
-## 11.3 NAÏVE PROMPT
+## 12.3 NAÏVE PROMPT
 
 ```text
 Design an AI-based smart traffic system.
@@ -406,7 +406,7 @@ Design an AI-based smart traffic system.
 
 ---
 
-## 11.4 EXPECTED OUTPUT FROM NAÏVE PROMPT
+## 12.4 EXPECTED OUTPUT FROM NAÏVE PROMPT
 
 A simple prompt may produce a general response such as:
 
@@ -418,7 +418,7 @@ The response gives a **basic understanding of the system**, but it does not clea
 
 ---
 
-# 12. REFINED ENGINEERING PROMPT
+# 13. REFINED ENGINEERING PROMPT
 
 ```text
 Act as an AI and Embedded Systems Engineer.
@@ -455,7 +455,7 @@ Present the solution in a simple, structured format.
 
 ---
 
-## 13. EXPECTED OUTPUT FROM REFINED PROMPT
+## 14. EXPECTED OUTPUT FROM REFINED PROMPT
 
 The refined prompt is expected to generate a **complete and organized engineering solution** containing the system requirements, architecture, algorithm, implementation, testing, and expected results.
 
@@ -465,7 +465,7 @@ Unlike the naïve prompt, the refined prompt provides **specific instructions an
 
 ---
 
-## 14. SYSTEM ARCHITECTURE
+## 15. SYSTEM ARCHITECTURE
 
 ```text
 Traffic Cameras
@@ -484,10 +484,11 @@ Traffic Signal Controller
        ↓
 Signal Control
 ```
+<img width="685" height="382" alt="image" src="https://github.com/user-attachments/assets/97b64ed2-e52e-461b-9336-a6788503d4cf" />
 
 ---
 
-## 15. DECISION LOGIC
+## 16. DECISION LOGIC
 
 ```text
 Detect Traffic
@@ -504,10 +505,11 @@ HIGH → HIGH PRIORITY
 MEDIUM → MEDIUM PRIORITY
 LOW → LOW PRIORITY
 ```
+<img width="585" height="381" alt="image" src="https://github.com/user-attachments/assets/5419aa47-92ec-416f-80d9-7459c57525ab" />
 
 ---
 
-## 16. PYTHON SIMULATION
+## 17. PYTHON SIMULATION
 
 ```python
 def traffic_control(density, emergency):
@@ -535,10 +537,11 @@ print(traffic_control("LOW", True))
 High Traffic - GREEN
 Emergency Vehicle - GREEN
 ```
+<img width="513" height="311" alt="image" src="https://github.com/user-attachments/assets/08c3b714-d2f3-4d53-bf7a-89bd6bd23b3d" />
 
 ---
 
-## 17. TEST CASES
+## 18. TEST CASES
 
 | Test Case | Traffic | Emergency Vehicle | Expected Result                         |
 | --------- | ------- | ----------------- | --------------------------------------- |
@@ -551,7 +554,9 @@ Emergency Vehicle - GREEN
 
 ---
 
-## 18. EVALUATION
+<img width="446" height="282" alt="image" src="https://github.com/user-attachments/assets/e9cf2016-6da2-41f0-9c05-0d934560b47e" />
+
+## 19. EVALUATION
 
 The responses can be compared using:
 
@@ -573,7 +578,7 @@ The **refined prompt produces a more complete response** because it clearly defi
 
 ---
 
-## 19. FINDINGS
+## 20. FINDINGS
 
 1. Naïve prompts provide simple and general responses.
 2. Refined prompts produce more detailed outputs.
@@ -585,7 +590,7 @@ The **refined prompt produces a more complete response** because it clearly defi
 
 ---
 
-## 20. KEY LEARNING
+## 21. KEY LEARNING
 
 ```text
 Clear Instructions
@@ -605,12 +610,12 @@ A carefully designed prompt helps the AI understand the engineering problem and 
 
 ---
 
-## 21. CONCLUSION
+## 22. CONCLUSION
 
 The experiment demonstrates that **prompt design has a significant effect on AI-generated responses**. A naïve prompt gives a broad response, whereas a refined prompt produces a more **detailed, structured, relevant, and technically useful solution**.
 
 ---
 
-## 22. RESULT
+## 23. RESULT
 
 **The experiment was successfully completed. The comparison showed that refined prompts provide better-quality and more structured responses than naïve prompts, particularly when solving complex engineering problems.**
